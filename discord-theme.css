@@ -379,8 +379,19 @@ html .typingindicator-folder {
 }
 
 /* Sidebar / Channel list */
+.sidebar__5e434,
+.container__5e434,
+.sidebarList__5e434,
+.container__2637a,
+.container__6e9be,
+.container__7aaec,
+.containerDefault_c69b6d,
+.containerDefault__29444,
+.container__394db,
+.container_e131a9,
+.container__37e49,
 [class*="sidebar_"],
-[class*="container_"][class*="sidebar"] {
+[class*="privateChannels_"] {
 	background: rgba(0, 0, 0, 0.2) !important;
 	backdrop-filter: blur(12px) !important;
 }
@@ -392,9 +403,13 @@ html .typingindicator-folder {
 }
 
 /* Members list */
-[class*="members_"] {
-	background: rgba(0, 0, 0, 0.3) !important;
-	backdrop-filter: blur(10px) !important;
+[class*="members_"],
+.members_c8ffbb,
+.thin_d125d2,
+.scrollerBase_d125d2,
+.scroller__629e4 {
+	background: rgba(0, 0, 0, 0.2) !important;
+	backdrop-filter: blur(12px) !important;
 }
 
 /* Message input */
@@ -413,4 +428,23 @@ html .typingindicator-folder {
 [class*="panels_"] {
 	background: rgba(0, 0, 0, 0.4) !important;
 	backdrop-filter: blur(10px) !important;
+}
+
+/* Call container */
+.callContainer_cb9592 {
+	background: rgba(0, 0, 0, 0.2) !important;
+	backdrop-filter: blur(12px) !important;
+}
+
+/* Header content */
+.headerContent_f37cb1,
+.primaryInfo_f37cb1 {
+	background: rgba(0, 0, 0, 0.2) !important;
+	backdrop-filter: blur(12px) !important;
+}
+
+/* Now playing column */
+.nowPlayingColumn__133bf {
+	background: rgba(0, 0, 0, 0.2) !important;
+	backdrop-filter: blur(12px) !important;
 }
