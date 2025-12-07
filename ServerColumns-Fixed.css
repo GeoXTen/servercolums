@@ -203,14 +203,14 @@ body.folderContentIsOpen_ac0584 .titleBar__421ed.typeMacOS__421ed .macButtons__4
 }
 
 /* ============================================ */
-/* FOLDER FIX - Make expanded folders horizontal */
+/* FOLDER FIX - 3 servers per row in folders */
 /* ============================================ */
 
 .wrapper_ef3116 .folderGroup__48112 {
 	border-bottom: calc(1px * var(--guildgap_v)) solid transparent !important;
 	margin: calc(1px * var(--guildgap_v)) calc(1px * (12 * var(--guildsize_v)/50)) auto 0 !important;
-	width: auto !important;
-	max-width: calc(1px * (var(--guildsize_v) * var(--columns_v) + 20 * (var(--guildsize_v)/50) + 14 * (var(--guildsize_v)/50) * (var(--columns_v) - 1))) !important;
+	/* Full width to match columns */
+	width: calc(1px * (var(--guildsize_v) * var(--columns_v) + 14 * (var(--guildsize_v)/50) * (var(--columns_v) - 1))) !important;
 }
 
 /* Collapsed folder - single icon width */
@@ -222,7 +222,7 @@ body.folderContentIsOpen_ac0584 .titleBar__421ed.typeMacOS__421ed .macButtons__4
 	margin: 0 !important;
 }
 
-/* Expanded folder content - horizontal layout */
+/* Expanded folder content - 3 per row grid */
 .wrapper_ef3116 .folderGroup__48112 [role="group"] {
 	overflow: visible !important;
 	margin: 0 !important;
@@ -233,25 +233,22 @@ body.folderContentIsOpen_ac0584 .titleBar__421ed.typeMacOS__421ed .macButtons__4
 	flex-flow: row wrap !important;
 	align-content: flex-start !important;
 	gap: unset !important;
+	/* Constrain width to force 3 per row */
+	width: calc(1px * (var(--guildsize_v) * var(--columns_v) + 14 * (var(--guildsize_v)/50) * (var(--columns_v) - 1))) !important;
 }
 
 .wrapper_ef3116 .folderGroup__48112:not(.isExpanded__48112) .stack_dbd263 {
 	display: none !important;
 }
 
-/* Hide duplicate elements inside folders */
-.wrapper_ef3116 .folderGroup__48112 [role="group"] .pill_e5445c {
-	display: none !important;
-}
-
-/* Hide the duplicate stack container that causes double servers */
-.wrapper_ef3116 .folderGroup__48112 [role="group"] > .stack_dbd263 {
-	display: none !important;
-}
-
-/* Servers inside expanded folder */
+/* Servers inside expanded folder - sized to fit 3 per row */
 .wrapper_ef3116 .folderGroup__48112.isExpanded__48112 [role="group"] .listItem__650eb {
-	margin: calc(1.5px * var(--guildgap_v)) calc(1px * (12 * var(--guildsize_v)/50)) calc(1.5px * var(--guildgap_v)) 0 !important;
+	margin: calc(1.5px * var(--guildgap_v)) calc(1px * (7 * var(--guildsize_v)/50)) calc(1.5px * var(--guildgap_v)) 0 !important;
+}
+
+/* Remove right margin on every 3rd item */
+.wrapper_ef3116 .folderGroup__48112.isExpanded__48112 [role="group"] .listItem__650eb:nth-child(3n) {
+	margin-right: 0 !important;
 }
 
 .wrapper_ef3116 .folderGroup__48112.isExpanded__48112 [role="group"] .listItem__650eb:last-child {
