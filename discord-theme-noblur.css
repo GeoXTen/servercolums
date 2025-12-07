@@ -268,3 +268,25 @@
 .wrapper_ef3116 .folderGroup__48112 [role="group"][style*="height:"] {
 	height: unset !important;
 }
+
+
+/* Fix home button overlap */
+.wrapper_ef3116 .listItem__650eb:first-child .lowerBadge_cc5dd2,
+.wrapper_ef3116 .listItem__650eb:first-child .upperBadge_cc5dd2,
+.wrapper_ef3116 .lowerBadge_cc5dd2,
+.wrapper_ef3116 .upperBadge_cc5dd2 {
+	position: absolute !important;
+	background: transparent !important;
+}
+
+.wrapper_ef3116 .lowerBadge_cc5dd2 .base__2b1f5,
+.wrapper_ef3116 .upperBadge_cc5dd2 .base__2b1f5 {
+	background: transparent !important;
+}
+
+/* Hide the black circle activity indicator */
+.wrapper_ef3116 .listItem__650eb .activityIcon_cc5dd2,
+.wrapper_ef3116 .listItem__650eb [class*="lowerBadgeContainer"],
+.wrapper_ef3116 .listItem__650eb .lowerBadge_cc5dd2 > div:not(.base__2b1f5) {
+	display: none !important;
+}
