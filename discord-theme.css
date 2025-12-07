@@ -469,3 +469,12 @@ html .typingindicator-folder {
 	background: rgba(0, 0, 0, 0.2) !important;
 	backdrop-filter: blur(6px) !important;
 }
+
+/* Messages - no blur */
+.message__5126c,
+.cozyMessage__5126c,
+.wrapper_c19a55,
+.cozy_c19a55 {
+	background: transparent !important;
+	backdrop-filter: none !important;
+}
