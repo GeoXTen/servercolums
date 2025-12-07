@@ -330,3 +330,57 @@ html .typingindicator-folder {
 .wrapper_ef3116 .folderGroup__48112 [role="group"][style*="height:"] {
 	height: unset !important;
 }
+
+/* ============================================ */
+/* GIF BACKGROUND */
+/* ============================================ */
+
+.app_b1f720::before {
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: -2;
+	pointer-events: none;
+	background: url("C:/Users/Qiqi/Documents/Github/servercolums/cartethyia.gif") center/cover no-repeat fixed;
+}
+
+.app_b1f720::after {
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: -1;
+	background: rgba(0, 0, 0, 0.4); /* Darken overlay - adjust 0.4 to change darkness */
+	pointer-events: none;
+}
+
+/* Make Discord UI transparent to show background */
+.app_b1f720,
+.bg__12180,
+.layers__1c917,
+.layer_cd0de5 {
+	background: transparent !important;
+}
+
+.container__037ed,
+.base_c33a68 {
+	background: rgba(0, 0, 0, 0.4) !important;
+}
+
+.sidebar__046e9,
+.container__590e2 {
+	background: rgba(0, 0, 0, 0.5) !important;
+}
+
+.chat__52833 {
+	background: rgba(0, 0, 0, 0.4) !important;
+}
+
+.wrapper_ef3116 {
+	background: rgba(0, 0, 0, 0.5) !important;
+}
