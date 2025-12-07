@@ -223,19 +223,29 @@ body.folderContentIsOpen_ac0584 .titleBar__421ed.typeMacOS__421ed .macButtons__4
 }
 
 /* Expanded folder content - horizontal layout */
-.wrapper_ef3116 .folderGroup__48112 [role="group"],
-.wrapper_ef3116 .folderGroup__48112 .stack_dbd263 {
+.wrapper_ef3116 .folderGroup__48112 [role="group"] {
 	overflow: visible !important;
 	margin: 0 !important;
-	padding: calc(4px * var(--guildsize_v)/50) 0 !important;
+	margin-left: -1px !important;
+	margin-bottom: 0 !important;
+	padding: calc(4px * var(--guildsize_v)/50) 0 calc(4px * var(--guildsize_v)/50) 1px !important;
 	display: flex !important;
 	flex-flow: row wrap !important;
 	align-content: flex-start !important;
 	gap: unset !important;
-	width: 100% !important;
 }
 
 .wrapper_ef3116 .folderGroup__48112:not(.isExpanded__48112) .stack_dbd263 {
+	display: none !important;
+}
+
+/* Hide duplicate elements inside folders */
+.wrapper_ef3116 .folderGroup__48112 [role="group"] .pill_e5445c {
+	display: none !important;
+}
+
+/* Hide the duplicate stack container that causes double servers */
+.wrapper_ef3116 .folderGroup__48112 [role="group"] > .stack_dbd263 {
 	display: none !important;
 }
 
