@@ -448,3 +448,12 @@ html .typingindicator-folder {
 	background: rgba(0, 0, 0, 0.2) !important;
 	backdrop-filter: blur(12px) !important;
 }
+
+/* Scroller */
+.scroller__36d07,
+.customTheme_d125d2,
+.auto_d125d2,
+.managedReactiveScroller_d125d2 {
+	background: rgba(0, 0, 0, 0.2) !important;
+	backdrop-filter: blur(6px) !important;
+}
