@@ -480,3 +480,14 @@ html .typingindicator-folder {
 	background: transparent !important;
 	backdrop-filter: none !important;
 }
+
+/* Force no blur on chat area */
+.scroller__36d07,
+.scroller__36d07 *,
+[class*="messagesWrapper"],
+[class*="messagesWrapper"] *,
+[class*="scrollerInner"],
+[class*="scrollerInner"] * {
+	backdrop-filter: none !important;
+	-webkit-backdrop-filter: none !important;
+}
