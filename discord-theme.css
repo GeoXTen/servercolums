@@ -1,6 +1,17 @@
+/**
+* @name Qiqi Discord Theme
+* @description Server columns + custom background
+* @version 1.0
+*/
+
 @import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/ThemeDevBadge.css);
 
 :root {
+	/* Background Image */
+	--background-image: url("https://motionbgs.com/media/8715/cartethyia-whisper-of-eternity.3840x2160.jpg");
+	--background-overlay: rgba(0, 0, 0, 0.6);
+	
+	/* Server Columns */
 	--columns: 		3;
 	--guildsize: 		50;
 	--guildgap: 		3;
@@ -332,55 +343,94 @@ html .typingindicator-folder {
 }
 
 /* ============================================ */
-/* GIF BACKGROUND */
+/* IMAGE BACKGROUND */
 /* ============================================ */
 
-.app_b1f720::before {
-	content: "";
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	z-index: -2;
-	pointer-events: none;
-	background: url("https://motionbgs.com/media/8715/cartethyia-whisper-of-eternity.3840x2160.jpg") center/cover no-repeat fixed;
+.theme-dark,
+.theme-light {
+	--background-primary: transparent;
+	--background-secondary: var(--background-overlay);
+	--background-secondary-alt: var(--background-overlay);
+	--background-tertiary: var(--background-overlay);
+	--background-accent: var(--background-overlay);
+	--background-floating: var(--background-overlay);
 }
 
-.app_b1f720::after {
-	content: "";
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	z-index: -1;
-	background: rgba(0, 0, 0, 0.4); /* Darken overlay - adjust 0.4 to change darkness */
-	pointer-events: none;
+.appMount_fae9dd,
+.appMount_ea7e65,
+.app_a01fb1,
+.app_bd26cc,
+.bg_d4b6c5,
+.bg__12180 {
+	background: var(--background-image) center/cover no-repeat fixed !important;
 }
 
-/* Make Discord UI transparent to show background */
-.app_b1f720,
-.bg__12180,
+.layers_d4b6c5,
 .layers__1c917,
-.layer_cd0de5 {
+.layer_d4b6c5,
+.layer_cd0de5,
+.baseLayer_d4b6c5,
+.baseLayer_cd0de5 {
 	background: transparent !important;
 }
 
-.container__037ed,
-.base_c33a68 {
-	background: rgba(0, 0, 0, 0.4) !important;
+/* Overlay on top of background */
+.baseLayer_d4b6c5::before,
+.baseLayer_cd0de5::before {
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: var(--background-overlay);
+	pointer-events: none;
+	z-index: -1;
 }
 
-.sidebar__046e9,
-.container__590e2 {
-	background: rgba(0, 0, 0, 0.5) !important;
-}
-
-.chat__52833 {
-	background: rgba(0, 0, 0, 0.4) !important;
-}
-
+/* Server list */
 .wrapper_ef3116 {
+	background: rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Sidebar / Channel list */
+.sidebar_ded4b5,
+.sidebar__046e9,
+.container_ee69e0,
+.container__590e2 {
+	background: rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Chat area */
+.chat_a7d72e,
+.chat__52833,
+.chatContent_a7d72e,
+.chatContent__52833 {
+	background: transparent !important;
+}
+
+/* Members list */
+.members_cbd271,
+.members__9f47b,
+.container_cbd271 {
+	background: rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Message input */
+.channelTextArea_a7d72e,
+.channelTextArea__52833,
+.scrollableContainer__33e06 {
+	background: rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Title bar */
+.titleBar_a934d8,
+.titleBar__421ed {
+	background: transparent !important;
+}
+
+/* User panel at bottom */
+.panels_a4d4d9,
+.panels__01onal {
 	background: rgba(0, 0, 0, 0.5) !important;
 }
