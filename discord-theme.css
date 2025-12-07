@@ -374,15 +374,15 @@ html .typingindicator-folder {
 
 /* Server list */
 .wrapper_ef3116 {
-	background: rgba(0, 0, 0, 0.3) !important;
-	backdrop-filter: blur(10px) !important;
+	background: rgba(0, 0, 0, 0.2) !important;
+	backdrop-filter: blur(12px) !important;
 }
 
 /* Sidebar / Channel list */
 [class*="sidebar_"],
 [class*="container_"][class*="sidebar"] {
-	background: rgba(0, 0, 0, 0.3) !important;
-	backdrop-filter: blur(10px) !important;
+	background: rgba(0, 0, 0, 0.2) !important;
+	backdrop-filter: blur(12px) !important;
 }
 
 /* Chat area */
