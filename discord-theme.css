@@ -457,3 +457,15 @@ html .typingindicator-folder {
 	background: rgba(0, 0, 0, 0.2) !important;
 	backdrop-filter: blur(6px) !important;
 }
+
+/* Chat content - no blur */
+.chatContent_f75fb0 {
+	background: transparent !important;
+	backdrop-filter: none !important;
+}
+
+/* Container - bit blur */
+.container_c8ffbb {
+	background: rgba(0, 0, 0, 0.2) !important;
+	backdrop-filter: blur(6px) !important;
+}
