@@ -374,8 +374,7 @@ html .typingindicator-folder {
 
 /* Server list */
 .wrapper_ef3116 {
-	background: rgba(0, 0, 0, 0.2) !important;
-	backdrop-filter: blur(12px) !important;
+	background: rgba(0, 0, 0, 0.3) !important;
 }
 
 /* Sidebar / Channel list */
@@ -392,8 +391,7 @@ html .typingindicator-folder {
 .container__37e49,
 [class*="sidebar_"],
 [class*="privateChannels_"] {
-	background: rgba(0, 0, 0, 0.2) !important;
-	backdrop-filter: blur(12px) !important;
+	background: rgba(0, 0, 0, 0.3) !important;
 }
 
 /* Chat area */
@@ -408,14 +406,12 @@ html .typingindicator-folder {
 .thin_d125d2,
 .scrollerBase_d125d2,
 .scroller__629e4 {
-	background: rgba(0, 0, 0, 0.2) !important;
-	backdrop-filter: blur(12px) !important;
+	background: rgba(0, 0, 0, 0.3) !important;
 }
 
 /* Message input */
 [class*="channelTextArea_"] {
 	background: rgba(0, 0, 0, 0.4) !important;
-	backdrop-filter: blur(8px) !important;
 	border-radius: 8px !important;
 }
 
@@ -427,29 +423,25 @@ html .typingindicator-folder {
 /* User panel at bottom */
 [class*="panels_"] {
 	background: rgba(0, 0, 0, 0.4) !important;
-	backdrop-filter: blur(10px) !important;
 }
 
 /* Call container */
 .callContainer_cb9592 {
-	background: rgba(0, 0, 0, 0.2) !important;
-	backdrop-filter: blur(12px) !important;
+	background: rgba(0, 0, 0, 0.3) !important;
 }
 
 /* Header content */
 .headerContent_f37cb1,
 .primaryInfo_f37cb1 {
-	background: rgba(0, 0, 0, 0.2) !important;
-	backdrop-filter: blur(12px) !important;
+	background: rgba(0, 0, 0, 0.3) !important;
 }
 
 /* Now playing column */
 .nowPlayingColumn__133bf {
-	background: rgba(0, 0, 0, 0.2) !important;
-	backdrop-filter: blur(12px) !important;
+	background: rgba(0, 0, 0, 0.3) !important;
 }
 
-/* Scroller - no blur */
+/* Scroller */
 .scroller__36d07,
 .customTheme_d125d2,
 .auto_d125d2,
@@ -457,37 +449,34 @@ html .typingindicator-folder {
 .disableScrollAnchor_d125d2,
 .managedReactiveScroller_d125d2 {
 	background: transparent !important;
-	backdrop-filter: none !important;
 }
 
-/* Chat content - no blur */
+/* Chat content */
 .chatContent_f75fb0 {
 	background: transparent !important;
-	backdrop-filter: none !important;
 }
 
-/* Container - bit blur */
+/* Container */
 .container_c8ffbb {
-	background: rgba(0, 0, 0, 0.2) !important;
-	backdrop-filter: blur(6px) !important;
+	background: rgba(0, 0, 0, 0.3) !important;
 }
 
-/* Messages - no blur */
+/* Messages */
 .message__5126c,
 .cozyMessage__5126c,
 .wrapper_c19a55,
 .cozy_c19a55 {
 	background: transparent !important;
-	backdrop-filter: none !important;
 }
 
-/* Force no blur on chat area */
-.scroller__36d07,
-.scroller__36d07 *,
-[class*="messagesWrapper"],
-[class*="messagesWrapper"] *,
-[class*="scrollerInner"],
-[class*="scrollerInner"] * {
+/* Remove ALL blur globally */
+*,
+*::before,
+*::after,
+html *,
+body *,
+#app-mount *,
+.appMount__51fd7 * {
 	backdrop-filter: none !important;
 	-webkit-backdrop-filter: none !important;
 }
