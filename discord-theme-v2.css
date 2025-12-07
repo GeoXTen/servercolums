@@ -1,15 +1,13 @@
 /**
-* @name Qiqi Discord Theme (No Blur)
-* @description Server columns + custom background - no blur
-* @version 1.0
+* @name Qiqi Discord Theme v2
+* @description Server columns + custom background
+* @version 2.0
 */
 
 /* ============================================ */
-/* REMOVE ALL BLUR FIRST */
+/* REMOVE ALL BLUR */
 /* ============================================ */
-*,
-*::before,
-*::after {
+*, *::before, *::after {
 	backdrop-filter: none !important;
 	-webkit-backdrop-filter: none !important;
 }
@@ -21,7 +19,6 @@
 	--background-image: url("https://motionbgs.com/media/8715/cartethyia-whisper-of-eternity.3840x2160.jpg");
 	--background-overlay: rgba(0, 0, 0, 0.6);
 	
-	/* Server Columns */
 	--columns: 3;
 	--guildsize: 50;
 	--guildgap: 3;
@@ -34,27 +31,20 @@
 }
 
 /* ============================================ */
-/* BACKGROUND IMAGE */
+/* BACKGROUND */
 /* ============================================ */
 .appMount__51fd7 {
 	background: var(--background-image) center/cover no-repeat fixed !important;
 }
 
-.app_a3002d,
-.app__160d8,
-.bg__960e4,
-.layers__960e4,
-.layers__160d8 {
+.app_a3002d, .app__160d8, .bg__960e4, .layers__960e4, .layers__160d8 {
 	background: transparent !important;
 }
 
 .bg__960e4::before {
 	content: "";
 	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
+	top: 0; left: 0; right: 0; bottom: 0;
 	background: var(--background-overlay);
 	pointer-events: none;
 }
@@ -62,98 +52,21 @@
 /* ============================================ */
 /* TRANSPARENT PANELS */
 /* ============================================ */
-
-/* Server list */
-.wrapper_ef3116 {
-	background: rgba(0, 0, 0, 0.4) !important;
-}
-
-/* Sidebar */
-.sidebar__5e434,
-.container__5e434,
-.sidebarList__5e434,
-.container__2637a,
-.container__6e9be,
-.container__7aaec,
-.containerDefault_c69b6d,
-.containerDefault__29444,
-.container__394db,
-.container_e131a9,
-.container__37e49,
-[class*="sidebar_"],
-[class*="privateChannels_"] {
-	background: rgba(0, 0, 0, 0.4) !important;
-}
-
-/* Chat area */
-[class*="chat_"],
-[class*="chatContent_"],
-.chatContent_f75fb0 {
-	background: transparent !important;
-}
-
-/* Members list */
-[class*="members_"],
-.members_c8ffbb,
-.container_c8ffbb {
-	background: rgba(0, 0, 0, 0.4) !important;
-}
-
-/* Scrollers */
-.thin_d125d2,
-.scrollerBase_d125d2,
-.scroller__629e4,
-.scroller__36d07,
-.customTheme_d125d2,
-.auto_d125d2,
-.disableScrollAnchor_d125d2,
-.managedReactiveScroller_d125d2 {
-	background: transparent !important;
-}
-
-/* Message input */
-[class*="channelTextArea_"] {
-	background: rgba(0, 0, 0, 0.5) !important;
-	border-radius: 8px !important;
-}
-
-/* Title bar */
-[class*="titleBar_"] {
-	background: transparent !important;
-}
-
-/* User panel */
-[class*="panels_"] {
-	background: rgba(0, 0, 0, 0.5) !important;
-}
-
-/* Call container */
-.callContainer_cb9592 {
-	background: rgba(0, 0, 0, 0.4) !important;
-}
-
-/* Header */
-.headerContent_f37cb1,
-.primaryInfo_f37cb1 {
-	background: rgba(0, 0, 0, 0.4) !important;
-}
-
-/* Now playing */
-.nowPlayingColumn__133bf {
-	background: rgba(0, 0, 0, 0.4) !important;
-}
-
-/* Messages */
-.message__5126c,
-.cozyMessage__5126c,
-.wrapper_c19a55,
-.cozy_c19a55 {
-	background: transparent !important;
-}
+.wrapper_ef3116 { background: rgba(0, 0, 0, 0.4) !important; }
+.sidebar__5e434, .container__5e434, .sidebarList__5e434 { background: rgba(0, 0, 0, 0.4) !important; }
+[class*="chat_"], [class*="chatContent_"] { background: transparent !important; }
+[class*="members_"], .members_c8ffbb, .container_c8ffbb { background: rgba(0, 0, 0, 0.4) !important; }
+[class*="channelTextArea_"] { background: rgba(0, 0, 0, 0.5) !important; }
+[class*="panels_"] { background: rgba(0, 0, 0, 0.5) !important; }
+[class*="titleBar_"] { background: transparent !important; }
+.headerContent_f37cb1, .primaryInfo_f37cb1 { background: rgba(0, 0, 0, 0.4) !important; }
+.callContainer_cb9592 { background: rgba(0, 0, 0, 0.4) !important; }
+.nowPlayingColumn__133bf { background: rgba(0, 0, 0, 0.4) !important; }
+.scroller__36d07, .scrollerBase_d125d2, .thin_d125d2 { background: transparent !important; }
 
 
 /* ============================================ */
-/* SERVER COLUMNS */
+/* SERVER COLUMNS - FROM ORIGINAL */
 /* ============================================ */
 
 .visual-refresh .wrapper_ef3116 .listItem__650eb {
@@ -190,9 +103,20 @@
 	gap: unset !important;
 }
 
+.wrapper_ef3116 .scroller_ef3116 > .stack_dbd263,
+.wrapper_ef3116 .listItem__650eb + div[aria-label]:not([class]) {
+	gap: unset !important;
+	padding: unset !important;
+}
+
 .wrapper_ef3116 .listItem__650eb {
 	margin: calc(1.5px* var(--guildgap_v)) calc(1px*(12* var(--guildsize_v) / 50)) calc(1.5px* var(--guildgap_v)) 0 !important;
 	width: auto !important;
+}
+
+.wrapper_ef3116 .blobContainer_e5445c,
+.wrapper_ef3116 .guildsError__32e67 {
+	margin: 0 !important;
 }
 
 .wrapper_ef3116 .placeholderMask__6629f,
@@ -202,20 +126,48 @@
 	height: calc(1px * var(--guildsize_v)) !important;
 }
 
+.wrapper_ef3116 .svg_cc5dd2 {
+	top: 0 !important;
+	left: 0 !important;
+}
+
+/* Badge positioning */
+.wrapper_ef3116 .upperBadge_cc5dd2 .base__2b1f5 {
+	transform: translate(calc(3px * ((38 - var(--guildsize_v))/10)), calc(-3px * ((38 - var(--guildsize_v))/10))) scale(calc(var(--guildsize_v)/50)) !important;
+}
+.wrapper_ef3116 .upperLeftBadge_820890 .base__2b1f5 {
+	transform: translate(calc(-3px * ((38 - var(--guildsize_v))/10)), calc(-3px * ((38 - var(--guildsize_v))/10))) scale(calc(var(--guildsize_v)/50)) !important;
+}
+.wrapper_ef3116 .lowerBadge_cc5dd2 .base__2b1f5 {
+	transform: translate(calc(3px * ((38 - var(--guildsize_v))/10)), calc(3px * ((38 - var(--guildsize_v))/10))) scale(calc(var(--guildsize_v)/50)) !important;
+}
+.wrapper_ef3116 .lowerLeftBadge_820890 .base__2b1f5 {
+	transform: translate(calc(-3px * ((38 - var(--guildsize_v))/10)), calc(3px * ((38 - var(--guildsize_v))/10))) scale(calc(var(--guildsize_v)/50)) !important;
+}
+
 .wrapper_ef3116 .guildSeparator__252b6 {
 	width: calc(1px * ((var(--guildsize_v) + 12 * var(--guildsize_v)/50) * var(--columns_v) - (12 * var(--guildsize_v)/50))) !important;
 	margin: calc(1px * (var(--guildsize_v)/10)) 0 !important;
 	display: block !important;
 }
 
-/* Folder fix - 3 servers per row */
+
+/* ============================================ */
+/* FOLDER FIX - 3 servers per row */
+/* ============================================ */
+
 .wrapper_ef3116 .folderGroup__48112 {
+	border-bottom: calc(1px * var(--guildgap_v)) solid transparent !important;
 	margin: calc(1px * var(--guildgap_v)) calc(1px * (12 * var(--guildsize_v)/50)) auto 0 !important;
 	width: calc(1px * var(--guildsize_v)) !important;
 }
 
 .wrapper_ef3116 .folderGroup__48112.isExpanded__48112 {
 	width: calc(1px * (var(--guildsize_v) * var(--columns_v) + 12 * (var(--guildsize_v)/50) * (var(--columns_v) - 1))) !important;
+}
+
+.wrapper_ef3116 .folderGroup__48112 > .listItem__650eb {
+	margin: 0 !important;
 }
 
 .wrapper_ef3116 .folderGroup__48112 .folderGuildsList__48112,
@@ -252,6 +204,7 @@
 	top: 0 !important;
 	bottom: 0 !important;
 	left: 0 !important;
+	margin-bottom: 0 !important;
 	border-radius: calc(16px * var(--guildsize_v)/50) !important;
 }
 
@@ -267,69 +220,4 @@
 
 .wrapper_ef3116 .folderGroup__48112 [role="group"][style*="height:"] {
 	height: unset !important;
-}
-
-
-/* Badge positioning from original ServerColumns */
-.wrapper_ef3116 .upperBadge_cc5dd2 .base__2b1f5 {
-	transform: translate(calc(3px * ((38 - var(--guildsize_v))/10)), calc(-3px * ((38 - var(--guildsize_v))/10))) scale(calc(var(--guildsize_v)/50)) !important;
-}
-.wrapper_ef3116 .upperLeftBadge_820890 .base__2b1f5 {
-	transform: translate(calc(-3px * ((38 - var(--guildsize_v))/10)), calc(-3px * ((38 - var(--guildsize_v))/10))) scale(calc(var(--guildsize_v)/50)) !important;
-}
-.wrapper_ef3116 .lowerBadge_cc5dd2 .base__2b1f5 {
-	transform: translate(calc(3px * ((38 - var(--guildsize_v))/10)), calc(3px * ((38 - var(--guildsize_v))/10))) scale(calc(var(--guildsize_v)/50)) !important;
-}
-.wrapper_ef3116 .lowerLeftBadge_820890 .base__2b1f5 {
-	transform: translate(calc(-3px * ((38 - var(--guildsize_v))/10)), calc(3px * ((38 - var(--guildsize_v))/10))) scale(calc(var(--guildsize_v)/50)) !important;
-}
-
-
-/* Force badges to stay within bounds */
-.wrapper_ef3116 .listItem__650eb {
-	overflow: visible !important;
-	position: relative !important;
-}
-
-.wrapper_ef3116 .blobContainer_e5445c {
-	overflow: visible !important;
-	position: relative !important;
-}
-
-.wrapper_ef3116 .wrapper_cc5dd2 {
-	overflow: visible !important;
-	position: relative !important;
-}
-
-/* Position badges correctly */
-.wrapper_ef3116 .svg_cc5dd2 {
-	overflow: visible !important;
-}
-
-.wrapper_ef3116 .upperBadge_cc5dd2,
-.wrapper_ef3116 .lowerBadge_cc5dd2 {
-	position: absolute !important;
-	right: -4px !important;
-	left: auto !important;
-}
-
-.wrapper_ef3116 .upperBadge_cc5dd2 {
-	top: -4px !important;
-	bottom: auto !important;
-}
-
-.wrapper_ef3116 .lowerBadge_cc5dd2 {
-	bottom: -4px !important;
-	top: auto !important;
-}
-
-/* Scale down badges to fit */
-.wrapper_ef3116 .base__2b1f5 {
-	transform: scale(0.8) !important;
-}
-
-.wrapper_ef3116 .iconBadge__650eb,
-.wrapper_ef3116 .iconBadge__2b1f5 {
-	width: 18px !important;
-	height: 18px !important;
 }
