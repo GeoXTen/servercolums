@@ -346,37 +346,22 @@ html .typingindicator-folder {
 /* IMAGE BACKGROUND */
 /* ============================================ */
 
-.theme-dark,
-.theme-light {
-	--background-primary: transparent;
-	--background-secondary: var(--background-overlay);
-	--background-secondary-alt: var(--background-overlay);
-	--background-tertiary: var(--background-overlay);
-	--background-accent: var(--background-overlay);
-	--background-floating: var(--background-overlay);
-}
-
-.appMount_fae9dd,
-.appMount_ea7e65,
-.app_a01fb1,
-.app_bd26cc,
-.bg_d4b6c5,
-.bg__12180 {
+/* Main background on appMount */
+.appMount__51fd7 {
 	background: var(--background-image) center/cover no-repeat fixed !important;
 }
 
-.layers_d4b6c5,
-.layers__1c917,
-.layer_d4b6c5,
-.layer_cd0de5,
-.baseLayer_d4b6c5,
-.baseLayer_cd0de5 {
+/* Make inner layers transparent */
+.app_a3002d,
+.app__160d8,
+.bg__960e4,
+.layers__960e4,
+.layers__160d8 {
 	background: transparent !important;
 }
 
-/* Overlay on top of background */
-.baseLayer_d4b6c5::before,
-.baseLayer_cd0de5::before {
+/* Dark overlay */
+.bg__960e4::before {
 	content: "";
 	position: fixed;
 	top: 0;
@@ -385,7 +370,6 @@ html .typingindicator-folder {
 	bottom: 0;
 	background: var(--background-overlay);
 	pointer-events: none;
-	z-index: -1;
 }
 
 /* Server list */
@@ -394,43 +378,34 @@ html .typingindicator-folder {
 }
 
 /* Sidebar / Channel list */
-.sidebar_ded4b5,
-.sidebar__046e9,
-.container_ee69e0,
-.container__590e2 {
+[class*="sidebar_"],
+[class*="container_"][class*="sidebar"] {
 	background: rgba(0, 0, 0, 0.4) !important;
 }
 
 /* Chat area */
-.chat_a7d72e,
-.chat__52833,
-.chatContent_a7d72e,
-.chatContent__52833 {
+[class*="chat_"],
+[class*="chatContent_"] {
 	background: transparent !important;
 }
 
 /* Members list */
-.members_cbd271,
-.members__9f47b,
-.container_cbd271 {
+[class*="members_"] {
 	background: rgba(0, 0, 0, 0.4) !important;
 }
 
 /* Message input */
-.channelTextArea_a7d72e,
-.channelTextArea__52833,
-.scrollableContainer__33e06 {
+[class*="channelTextArea_"] {
 	background: rgba(0, 0, 0, 0.4) !important;
+	border-radius: 8px !important;
 }
 
 /* Title bar */
-.titleBar_a934d8,
-.titleBar__421ed {
+[class*="titleBar_"] {
 	background: transparent !important;
 }
 
 /* User panel at bottom */
-.panels_a4d4d9,
-.panels__01onal {
+[class*="panels_"] {
 	background: rgba(0, 0, 0, 0.5) !important;
 }
