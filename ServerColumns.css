@@ -551,41 +551,50 @@ html .typingindicator-folder {
 
 /* Apply animations to Discord elements */
 
-/* Apply to messages */
-[class*="message-"] {
-    animation: slideInLeft 0.3s ease-out;
+/* Server list icons with smooth transitions */
+.wrapper_ef3116 .listItem__650eb {
+    transition: transform 0.2s ease !important;
 }
 
-/* Apply to modals */
-[class*="modal"] {
-    animation: zoomIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+.wrapper_ef3116 .listItem__650eb:hover {
+    transform: scale(1.05) !important;
 }
 
-/* Apply to popouts */
-[class*="popout"] {
-    animation: fadeIn 0.2s ease-out;
-}
-
-/* Apply to tooltips */
-[class*="tooltip"] {
-    animation: fadeIn 0.15s ease-out;
-}
-
-/* Smooth transitions for all interactive elements */
-button,
-[role="button"],
-[class*="button"],
-a {
-    transition: background-color 0.2s, color 0.2s, transform 0.2s;
-}
-
-button:hover,
-[role="button"]:hover,
-[class*="button"]:hover {
-    transform: translateY(-2px);
-}
-
-/* Smooth transitions for settings panels */
-[class*="contentRegion"] > * {
+/* Folder expand animation */
+.wrapper_ef3116 .folderGroup__48112.isExpanded__48112 {
     animation: fadeIn 0.3s ease-out;
+}
+
+/* Server pill smooth animation */
+.wrapper_ef3116 .pill_e5445c,
+.wrapper_ef3116 .pill__5bc7e,
+.wrapper_ef3116 .pill__66ac8,
+.wrapper_ef3116 .pill__1f388,
+.wrapper_ef3116 .pill_ed9a5f {
+    transition: all 0.2s ease !important;
+}
+
+/* Guild icon animations */
+.wrapper_ef3116 .wrapper_cc5dd2,
+.wrapper_ef3116 .svg_cc5dd2 {
+    transition: transform 0.2s ease, opacity 0.2s ease !important;
+}
+
+.wrapper_ef3116 .listItem__650eb:hover .wrapper_cc5dd2,
+.wrapper_ef3116 .listItem__650eb:hover .svg_cc5dd2 {
+    transform: scale(1.1) !important;
+}
+
+/* Smooth folder background transitions */
+.wrapper_ef3116 .folderGroupBackground__48112 {
+    transition: width 0.3s ease, border-radius 0.3s ease !important;
+}
+
+/* Apply smooth hover to server icons */
+.wrapper_ef3116 .blobContainer_e5445c {
+    transition: transform 0.2s ease !important;
+}
+
+.wrapper_ef3116 .blobContainer_e5445c:hover {
+    transform: scale(1.1) !important;
 }
