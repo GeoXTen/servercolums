@@ -323,3 +323,269 @@ html .typingindicator-folder {
 	justify-content: center !important;
 	align-items: center !important;
 }
+
+/* ========================================
+   Discord Animations
+   ======================================== */
+
+/* Skeleton Loading Animation */
+@keyframes BA__skeletonAnimation {
+    0%, 100% { opacity: .15; }
+    50% { opacity: .075; }
+}
+
+/* Spotlight Rotation */
+@keyframes BA__spotlightAnimationRotate {
+    0% { rotate: 0deg; }
+    100% { rotate: 360deg; }
+}
+
+/* Spotlight Entry */
+@keyframes BA__spotlightAnimationEnter {
+    0% {
+        scale: .3;
+        opacity: 0;
+    }
+    100% {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+/* Fade Transitions */
+.discord-fade-enter-active,
+.discord-fade-exit-active {
+    transition: opacity .4s;
+}
+
+.discord-fade-enter,
+.discord-fade-exit-active {
+    opacity: 0;
+}
+
+/* Smooth transitions for interactive elements */
+.discord-smooth-hover {
+    transition: background-color .2s, color .2s;
+}
+
+/* Button transitions */
+.discord-button-transition {
+    transition: background-color .1s, border-color .1s, color .1s;
+}
+
+/* Icon rotation animation */
+.discord-icon-rotate {
+    transition: transform .2s;
+}
+
+.discord-icon-rotate:hover {
+    transform: rotate(15deg);
+}
+
+/* Smooth expand/collapse */
+.discord-expand {
+    transition: transform .2s;
+    transform: rotate(-90deg);
+}
+
+.discord-expand.active {
+    transform: rotate(0);
+}
+
+/* Scale on hover */
+.discord-scale-hover {
+    transition: transform .2s, opacity .2s;
+}
+
+.discord-scale-hover:hover {
+    transform: scale(1.05);
+}
+
+/* Slide in from right */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Slide in from left */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Slide in from top */
+@keyframes slideInTop {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Slide in from bottom */
+@keyframes slideInBottom {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Bounce in */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Zoom in */
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Zoom out */
+@keyframes zoomOut {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+/* Fade in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Fade out */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Rotate in */
+@keyframes rotateIn {
+    from {
+        transform: rotate(-200deg);
+        opacity: 0;
+    }
+    to {
+        transform: rotate(0);
+        opacity: 1;
+    }
+}
+
+/* Pulse */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Shake */
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(10px);
+    }
+}
+
+/* Apply animations to Discord elements */
+
+/* Apply to messages */
+[class*="message-"] {
+    animation: slideInLeft 0.3s ease-out;
+}
+
+/* Apply to modals */
+[class*="modal"] {
+    animation: zoomIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Apply to popouts */
+[class*="popout"] {
+    animation: fadeIn 0.2s ease-out;
+}
+
+/* Apply to tooltips */
+[class*="tooltip"] {
+    animation: fadeIn 0.15s ease-out;
+}
+
+/* Smooth transitions for all interactive elements */
+button,
+[role="button"],
+[class*="button"],
+a {
+    transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+button:hover,
+[role="button"]:hover,
+[class*="button"]:hover {
+    transform: translateY(-2px);
+}
+
+/* Smooth transitions for settings panels */
+[class*="contentRegion"] > * {
+    animation: fadeIn 0.3s ease-out;
+}
