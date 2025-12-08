@@ -293,3 +293,10 @@ html .typingindicator-folder {
 .wrapper_ef3116 .folderGroup__48112 [role="group"][style*="height:"] {
 	height: unset !important;
 }
+
+.wrapper_ef3116 .childWrapper__6e9f8,
+.wrapper_ef3116 .childWrapperNoHoverBg__6e9f8 {
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+}
