@@ -737,6 +737,16 @@ svg[class*="icon_"] {
    Member List Animations
    ======================================== */
 
+/* TEST: Very obvious animation for member list */
+[class*="members_"] [role="listitem"] {
+    transition: all 0.3s ease !important;
+}
+
+[class*="members_"] [role="listitem"]:hover {
+    transform: translateX(-10px) scale(1.03) !important;
+    background-color: rgba(100, 100, 255, 0.2) !important;
+}
+
 /* Member list container */
 [class*="members_"] {
     transition: opacity 0.2s ease !important;
@@ -745,32 +755,34 @@ svg[class*="icon_"] {
 /* Member row hover and transitions */
 .member__6edb4,
 .member_cbd271,
+[class*="member_"],
 [class*="memberInner_"] {
     transition: background-color 0.15s ease, transform 0.15s ease !important;
 }
 
 .member__6edb4:hover,
-.member_cbd271:hover {
+.member_cbd271:hover,
+[class*="member_"]:hover {
     transform: translateX(-4px) !important;
 }
 
 /* Member avatar animations */
 .member__6edb4 .avatar__08316,
 .member_cbd271 .avatar__08316,
-[class*="member_"] [class*="avatar_"] {
+[class*="members_"] [class*="avatar"] {
     transition: transform 0.2s ease, box-shadow 0.2s ease !important;
 }
 
 .member__6edb4:hover .avatar__08316,
 .member_cbd271:hover .avatar__08316,
-[class*="member_"]:hover [class*="avatar_"] {
-    transform: scale(1.1) !important;
+[class*="members_"] [role="listitem"]:hover [class*="avatar"] {
+    transform: scale(1.15) !important;
 }
 
 /* Member name and status transitions */
-[class*="member_"] [class*="name_"],
-[class*="member_"] [class*="username_"],
-[class*="member_"] [class*="activity_"] {
+[class*="members_"] [class*="name"],
+[class*="members_"] [class*="username"],
+[class*="members_"] [class*="activity"] {
     transition: color 0.15s ease !important;
 }
 
