@@ -598,3 +598,124 @@ html .typingindicator-folder {
 .wrapper_ef3116 .blobContainer_e5445c:hover {
     transform: scale(1.1) !important;
 }
+
+/* ========================================
+   Channel Animations
+   ======================================== */
+
+/* Channel list items - smooth hover and transitions */
+[class*="containerDefault"],
+[class*="channelRow"],
+[class*="link_"] {
+    transition: background-color 0.15s ease, transform 0.15s ease, opacity 0.15s ease !important;
+}
+
+/* Channel hover effect - slight slide right */
+[class*="containerDefault"]:hover,
+[class*="channelRow"]:hover {
+    transform: translateX(4px) !important;
+}
+
+/* Channel name smooth color transition */
+[class*="channelName"],
+[class*="name_"],
+[class*="overflow_"] {
+    transition: color 0.15s ease !important;
+}
+
+/* Channel icon animations */
+[class*="iconContainer"],
+[class*="channelIcon"] {
+    transition: transform 0.2s ease, color 0.15s ease !important;
+}
+
+[class*="containerDefault"]:hover [class*="iconContainer"],
+[class*="containerDefault"]:hover [class*="channelIcon"] {
+    transform: scale(1.15) !important;
+}
+
+/* Category header animations */
+[class*="containerDefault"][class*="clickable"]:has([class*="arrow"]),
+[class*="wrapper_"] [class*="icon_"][class*="collapsed_"] {
+    transition: transform 0.2s ease !important;
+}
+
+/* Arrow rotation for categories */
+[class*="arrow"],
+[class*="iconVisibility"] svg {
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Voice channel user list expand animation */
+[class*="voiceUsers"],
+[class*="listDefault"] {
+    transition: max-height 0.3s ease, opacity 0.2s ease !important;
+}
+
+/* Selected channel glow effect */
+[class*="modeSelected"],
+[class*="containerDefault"][class*="selected"] {
+    animation: channelSelectedPulse 0.3s ease-out !important;
+}
+
+@keyframes channelSelectedPulse {
+    0% {
+        transform: scale(0.98);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.01);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Unread channel indicator animation */
+[class*="unread"] {
+    animation: unreadPulse 2s ease-in-out infinite !important;
+}
+
+@keyframes unreadPulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+}
+
+/* New messages bar slide in */
+[class*="newMessagesBar"],
+[class*="jumpToPresentBar"] {
+    animation: slideInTop 0.3s ease-out !important;
+}
+
+/* Channel action buttons fade in on hover */
+[class*="actionIcon"],
+[class*="iconItem"] {
+    transition: opacity 0.15s ease, transform 0.15s ease !important;
+}
+
+[class*="containerDefault"]:hover [class*="actionIcon"],
+[class*="containerDefault"]:hover [class*="iconItem"] {
+    animation: fadeIn 0.2s ease-out !important;
+}
+
+/* Thread channel animations */
+[class*="containerDefault"][class*="thread"],
+[class*="spine"] {
+    transition: opacity 0.2s ease !important;
+}
+
+/* Mention badge bounce */
+[class*="numberBadge"],
+[class*="mentionsBadge"] {
+    transition: transform 0.2s ease !important;
+}
+
+[class*="containerDefault"]:hover [class*="numberBadge"],
+[class*="containerDefault"]:hover [class*="mentionsBadge"] {
+    animation: bounceIn 0.4s ease !important;
+}
