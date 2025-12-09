@@ -719,3 +719,82 @@ html .typingindicator-folder {
 [class*="containerDefault"]:hover [class*="mentionsBadge"] {
     animation: bounceIn 0.4s ease !important;
 }
+
+/* ========================================
+   Member List Animations
+   ======================================== */
+
+/* Member list container */
+[class*="members_"] {
+    transition: opacity 0.2s ease !important;
+}
+
+/* Member row hover and transitions */
+[class*="member_"],
+[class*="memberInner_"] {
+    transition: background-color 0.15s ease, transform 0.15s ease !important;
+}
+
+[class*="member_"]:hover {
+    transform: translateX(-4px) !important;
+}
+
+/* Member avatar animations */
+[class*="member_"] [class*="avatar_"] {
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+[class*="member_"]:hover [class*="avatar_"] {
+    transform: scale(1.1) !important;
+}
+
+/* Member name and status transitions */
+[class*="member_"] [class*="name_"],
+[class*="member_"] [class*="username_"],
+[class*="member_"] [class*="activity_"] {
+    transition: color 0.15s ease !important;
+}
+
+/* Role group headers */
+[class*="membersGroup_"],
+[class*="membersGroupHeader_"] {
+    transition: opacity 0.2s ease !important;
+}
+
+/* Status indicator pulse for streaming/activities */
+[class*="member_"] [class*="status_"] {
+    transition: transform 0.2s ease !important;
+}
+
+[class*="member_"]:hover [class*="status_"] {
+    transform: scale(1.2) !important;
+}
+
+/* Bot tag animation */
+[class*="member_"] [class*="botTag_"],
+[class*="member_"] [class*="ownerIcon_"] {
+    transition: transform 0.15s ease, opacity 0.15s ease !important;
+}
+
+[class*="member_"]:hover [class*="botTag_"],
+[class*="member_"]:hover [class*="ownerIcon_"] {
+    transform: scale(1.1) !important;
+}
+
+/* Premium/boost badge animation */
+[class*="member_"] [class*="premiumIcon_"] {
+    transition: transform 0.2s ease !important;
+}
+
+[class*="member_"]:hover [class*="premiumIcon_"] {
+    animation: pulse 0.5s ease !important;
+}
+
+/* Member decorations/avatar decorations */
+[class*="member_"] [class*="avatarDecoration_"] {
+    transition: transform 0.2s ease, opacity 0.2s ease !important;
+}
+
+[class*="member_"]:hover [class*="avatarDecoration_"] {
+    transform: scale(1.05) !important;
+}
