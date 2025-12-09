@@ -603,34 +603,47 @@ html .typingindicator-folder {
    Channel Animations
    ======================================== */
 
+/* TEST: Very obvious animation for all links */
+[role="treeitem"] {
+    transition: all 0.3s ease !important;
+}
+
+[role="treeitem"]:hover {
+    transform: translateX(10px) scale(1.05) !important;
+    background-color: rgba(255, 100, 100, 0.2) !important;
+}
+
 /* Channel list items - smooth hover and transitions */
-[class*="containerDefault"],
-[class*="channelRow"],
-[class*="link_"] {
+.containerDefault_ae94f6,
+.containerDefault__0eed2,
+a[class*="link_"]:not([class*="listItem"]) {
     transition: background-color 0.15s ease, transform 0.15s ease, opacity 0.15s ease !important;
 }
 
 /* Channel hover effect - slight slide right */
-[class*="containerDefault"]:hover,
-[class*="channelRow"]:hover {
+.containerDefault_ae94f6:hover,
+.containerDefault__0eed2:hover,
+a[class*="link_"]:hover:not([class*="listItem"]) {
     transform: translateX(4px) !important;
 }
 
 /* Channel name smooth color transition */
-[class*="channelName"],
-[class*="name_"],
+.channelName_d27ef2,
+.name__181fd,
 [class*="overflow_"] {
     transition: color 0.15s ease !important;
 }
 
 /* Channel icon animations */
-[class*="iconContainer"],
-[class*="channelIcon"] {
+.iconContainer__63b4c,
+.iconContainer_ae94f6,
+svg[class*="icon_"] {
     transition: transform 0.2s ease, color 0.15s ease !important;
 }
 
-[class*="containerDefault"]:hover [class*="iconContainer"],
-[class*="containerDefault"]:hover [class*="channelIcon"] {
+.containerDefault_ae94f6:hover .iconContainer__63b4c,
+.containerDefault_ae94f6:hover .iconContainer_ae94f6,
+.containerDefault__0eed2:hover svg[class*="icon_"] {
     transform: scale(1.15) !important;
 }
 
@@ -730,20 +743,26 @@ html .typingindicator-folder {
 }
 
 /* Member row hover and transitions */
-[class*="member_"],
+.member__6edb4,
+.member_cbd271,
 [class*="memberInner_"] {
     transition: background-color 0.15s ease, transform 0.15s ease !important;
 }
 
-[class*="member_"]:hover {
+.member__6edb4:hover,
+.member_cbd271:hover {
     transform: translateX(-4px) !important;
 }
 
 /* Member avatar animations */
+.member__6edb4 .avatar__08316,
+.member_cbd271 .avatar__08316,
 [class*="member_"] [class*="avatar_"] {
     transition: transform 0.2s ease, box-shadow 0.2s ease !important;
 }
 
+.member__6edb4:hover .avatar__08316,
+.member_cbd271:hover .avatar__08316,
 [class*="member_"]:hover [class*="avatar_"] {
     transform: scale(1.1) !important;
 }
