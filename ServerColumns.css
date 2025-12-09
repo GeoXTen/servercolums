@@ -551,13 +551,9 @@ html .typingindicator-folder {
 
 /* Apply animations to Discord elements */
 
-/* Server list icons with smooth transitions */
+/* Server list icons with smooth transitions - no zoom to prevent shift */
 .wrapper_ef3116 .listItem__650eb {
-    transition: transform 0.2s ease !important;
-}
-
-.wrapper_ef3116 .listItem__650eb:hover {
-    transform: scale(1.05) !important;
+    transition: opacity 0.2s ease !important;
 }
 
 /* Folder expand animation */
@@ -574,15 +570,15 @@ html .typingindicator-folder {
     transition: all 0.2s ease !important;
 }
 
-/* Guild icon animations */
+/* Guild icon animations - smooth opacity change only */
 .wrapper_ef3116 .wrapper_cc5dd2,
 .wrapper_ef3116 .svg_cc5dd2 {
-    transition: transform 0.2s ease, opacity 0.2s ease !important;
+    transition: opacity 0.2s ease !important;
 }
 
 .wrapper_ef3116 .listItem__650eb:hover .wrapper_cc5dd2,
 .wrapper_ef3116 .listItem__650eb:hover .svg_cc5dd2 {
-    transform: scale(1.1) !important;
+    opacity: 0.9 !important;
 }
 
 /* Smooth folder background transitions */
@@ -590,13 +586,9 @@ html .typingindicator-folder {
     transition: width 0.3s ease, border-radius 0.3s ease !important;
 }
 
-/* Apply smooth hover to server icons */
+/* Apply smooth hover to server icons - opacity only */
 .wrapper_ef3116 .blobContainer_e5445c {
-    transition: transform 0.2s ease !important;
-}
-
-.wrapper_ef3116 .blobContainer_e5445c:hover {
-    transform: scale(1.1) !important;
+    transition: opacity 0.2s ease !important;
 }
 
 /* ========================================
