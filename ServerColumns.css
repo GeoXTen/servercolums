@@ -766,17 +766,17 @@ svg[class*="icon_"] {
     transform: translateX(-4px) !important;
 }
 
-/* Member avatar animations */
+/* Member avatar animations - reduced scale to prevent decoration issues */
 .member__6edb4 .avatar__08316,
 .member_cbd271 .avatar__08316,
-[class*="members_"] [class*="avatar"] {
+[class*="members_"] [class*="avatar"]:not([class*="Decoration"]) {
     transition: transform 0.2s ease, box-shadow 0.2s ease !important;
 }
 
 .member__6edb4:hover .avatar__08316,
 .member_cbd271:hover .avatar__08316,
-[class*="members_"] [role="listitem"]:hover [class*="avatar"] {
-    transform: scale(1.15) !important;
+[class*="members_"] [role="listitem"]:hover [class*="avatar"]:not([class*="Decoration"]) {
+    transform: scale(1.08) !important;
 }
 
 /* Member name and status transitions */
@@ -793,39 +793,41 @@ svg[class*="icon_"] {
 }
 
 /* Status indicator pulse for streaming/activities */
-[class*="member_"] [class*="status_"] {
+[class*="members_"] [class*="status"] {
     transition: transform 0.2s ease !important;
 }
 
-[class*="member_"]:hover [class*="status_"] {
-    transform: scale(1.2) !important;
+[class*="members_"] [role="listitem"]:hover [class*="status"] {
+    transform: scale(1.15) !important;
 }
 
 /* Bot tag animation */
-[class*="member_"] [class*="botTag_"],
-[class*="member_"] [class*="ownerIcon_"] {
+[class*="members_"] [class*="botTag"],
+[class*="members_"] [class*="ownerIcon"] {
     transition: transform 0.15s ease, opacity 0.15s ease !important;
 }
 
-[class*="member_"]:hover [class*="botTag_"],
-[class*="member_"]:hover [class*="ownerIcon_"] {
-    transform: scale(1.1) !important;
+[class*="members_"] [role="listitem"]:hover [class*="botTag"],
+[class*="members_"] [role="listitem"]:hover [class*="ownerIcon"] {
+    transform: scale(1.08) !important;
 }
 
 /* Premium/boost badge animation */
-[class*="member_"] [class*="premiumIcon_"] {
+[class*="members_"] [class*="premiumIcon"] {
     transition: transform 0.2s ease !important;
 }
 
-[class*="member_"]:hover [class*="premiumIcon_"] {
+[class*="members_"] [role="listitem"]:hover [class*="premiumIcon"] {
     animation: pulse 0.5s ease !important;
 }
 
-/* Member decorations/avatar decorations */
-[class*="member_"] [class*="avatarDecoration_"] {
+/* Member decorations/avatar decorations - keep in sync with avatar */
+[class*="members_"] [class*="avatarDecoration"],
+[class*="members_"] [class*="Decoration"] {
     transition: transform 0.2s ease, opacity 0.2s ease !important;
 }
 
-[class*="member_"]:hover [class*="avatarDecoration_"] {
-    transform: scale(1.05) !important;
+[class*="members_"] [role="listitem"]:hover [class*="avatarDecoration"],
+[class*="members_"] [role="listitem"]:hover [class*="Decoration"] {
+    transform: scale(1.08) !important;
 }
