@@ -556,6 +556,10 @@ html .typingindicator-folder {
     transition: opacity 0.2s ease !important;
 }
 
+.wrapper_ef3116 .listItem__650eb:hover {
+    transform: none !important;
+}
+
 /* Folder expand animation */
 .wrapper_ef3116 .folderGroup__48112.isExpanded__48112 {
     animation: fadeIn 0.3s ease-out;
@@ -579,6 +583,13 @@ html .typingindicator-folder {
 .wrapper_ef3116 .listItem__650eb:hover .wrapper_cc5dd2,
 .wrapper_ef3116 .listItem__650eb:hover .svg_cc5dd2 {
     opacity: 0.9 !important;
+    transform: none !important;
+}
+
+.wrapper_ef3116 .wrapper_cc5dd2:hover,
+.wrapper_ef3116 .svg_cc5dd2:hover,
+.wrapper_ef3116 .blobContainer_e5445c:hover {
+    transform: none !important;
 }
 
 /* Smooth folder background transitions */
