@@ -1,0 +1,54 @@
+/**
+* @name Server Columns - 4 Columns
+* @description Server columns with 4-column folders
+* @version 3.0
+*/
+
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/ServerColumns/ServerColumns.css);
+
+:root {
+	--columns: 4;
+	--guildsize: 50;
+	--guildgap: 3;
+	--aligndms: 1;
+}
+
+.wrapper_ef3116 .folderGroup__48112.isExpanded__48112,
+.ef3116c2da186559-wrapper ._48112cbe77dc5022-folderGroup._48112cbe77dc5022-isExpanded {
+	width: calc(1px * (var(--guildsize) * 4 + 12 * (var(--guildsize)/50) * 3)) !important;
+}
+
+.wrapper_ef3116 .folderGroup__48112.isExpanded__48112 [role="group"],
+.wrapper_ef3116 .folderGroup__48112 .folderGuildsList__48112,
+.ef3116c2da186559-wrapper ._48112cbe77dc5022-folderGroup._48112cbe77dc5022-isExpanded [role="group"],
+.ef3116c2da186559-wrapper ._48112cbe77dc5022-folderGroup ._48112cbe77dc5022-folderGuildsList {
+	height: auto !important;
+	overflow: visible !important;
+	margin: 0 !important;
+	margin-left: -1px !important;
+	padding: calc(4px * var(--guildsize)/50) 0 calc(4px * var(--guildsize)/50) 1px !important;
+	display: flex !important;
+	flex-direction: row !important;
+	flex-wrap: wrap !important;
+	align-content: flex-start !important;
+	gap: 0 !important;
+	width: calc(1px * (var(--guildsize) * 4 + 12 * (var(--guildsize)/50) * 3)) !important;
+}
+
+.wrapper_ef3116 .folderGroup__48112.isExpanded__48112 [role="group"] .listItem__650eb,
+.ef3116c2da186559-wrapper ._48112cbe77dc5022-folderGroup._48112cbe77dc5022-isExpanded [role="group"] ._650eb104245d257b-listItem {
+	margin: calc(1.5px * var(--guildgap)) calc(1px * (6 * var(--guildsize)/50)) calc(1.5px * var(--guildgap)) 0 !important;
+	flex-shrink: 0 !important;
+}
+
+/* Every 4th item - no right margin */
+.wrapper_ef3116 .folderGroup__48112.isExpanded__48112 [role="group"] .listItem__650eb:nth-child(4n),
+.ef3116c2da186559-wrapper ._48112cbe77dc5022-folderGroup._48112cbe77dc5022-isExpanded [role="group"] ._650eb104245d257b-listItem:nth-child(4n) {
+	margin-right: 0 !important;
+}
+
+.wrapper_ef3116 .folderGroup__48112.isExpanded__48112 .folderGroupBackground__48112,
+.ef3116c2da186559-wrapper ._48112cbe77dc5022-folderGroup._48112cbe77dc5022-isExpanded ._48112cbe77dc5022-folderGroupBackground {
+	width: 100% !important;
+	border-radius: calc(16px * var(--guildsize)/50) !important;
+}
