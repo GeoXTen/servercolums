@@ -172,33 +172,31 @@
 }
 
 
-/* Remove blue outline from server icons */
-.wrapper__3ed10 foreignObject,
-.wrapper_ef3116 foreignObject,
-[class*="wrapper_"] foreignObject {
-  mask: none !important;
-  -webkit-mask: none !important;
-}
-
-.wrapper__3ed10 svg > svg,
-.wrapper_ef3116 svg > svg,
-[class*="wrapper_"] svg > svg,
-.wrapper__3ed10 svg[class*="svg_"],
-.wrapper_ef3116 svg[class*="svg_"],
-[class*="wrapper_"] svg[class*="svg_"] {
+/* Remove blue outline/border from server icons */
+[class*="svg_"]:not([class*="icon"]),
+[class*="wrapper_"] > svg:not([class*="icon"]),
+.cc5dd25190031396-svg > svg,
+svg[class*="borderBase"],
+svg[class*="border_"],
+[class*="svgContainer"] > svg > svg {
   display: none !important;
 }
 
-/* Remove any remaining borders/outlines */
-.listItem__650eb .wrapper__3ed10,
-.listItem__650eb .wrapper_ef3116,
-._650eb104245d257b-listItem [class*="wrapper_"] {
-  outline: none !important;
-  border: none !important;
-  box-shadow: none !important;
+/* Alternative selectors for the animated border */
+.cc5dd25190031396-wrapper > .cc5dd25190031396-svg > .cc5dd25190031396-svg,
+[class*="wrapper_"][class*="cc5dd"] > [class*="svg_"] > [class*="svg_"] {
+  display: none !important;
 }
 
-.listItem__650eb svg[class*="borderBase"],
-._650eb104245d257b-listItem svg[class*="borderBase"] {
-  display: none !important;
+/* Hide any stroke-based borders */
+[class*="guilds"] svg path[stroke],
+[class*="guilds"] svg circle[stroke],
+[class*="guilds"] svg rect[stroke] {
+  stroke: transparent !important;
+}
+
+/* Force no outline on wrapper elements */
+[class*="blobContainer"] svg:not(:first-child),
+[class*="wrapper_"] svg svg {
+  visibility: hidden !important;
 }
