@@ -1,12 +1,13 @@
 /**
 * @name Server Columns Only
-* @description Server columns - imports from maintained source
-* @version 2.1
+* @description Server columns - auto-syncs with mwittrien's latest
+* @version 3.0
 */
 
-/* Import ServerColumns from DevilBro's maintained repo */
+/* Import latest from mwittrien's maintained repo */
 @import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/ServerColumns/ServerColumns.css);
 
+/* Your customizations - these override the imported defaults */
 :root {
 	--columns: 3;
 	--guildsize: 50;
