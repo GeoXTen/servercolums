@@ -173,30 +173,33 @@
 
 
 /* Remove blue outline/border from server icons */
-[class*="svg_"]:not([class*="icon"]),
-[class*="wrapper_"] > svg:not([class*="icon"]),
-.cc5dd25190031396-svg > svg,
-svg[class*="borderBase"],
-svg[class*="border_"],
-[class*="svgContainer"] > svg > svg {
+[class*="guilds_"] foreignObject ~ * {
   display: none !important;
 }
 
-/* Alternative selectors for the animated border */
-.cc5dd25190031396-wrapper > .cc5dd25190031396-svg > .cc5dd25190031396-svg,
-[class*="wrapper_"][class*="cc5dd"] > [class*="svg_"] > [class*="svg_"] {
+[class*="blobContainer_"] > [class*="svg_"]:not(:first-child) {
   display: none !important;
 }
 
-/* Hide any stroke-based borders */
-[class*="guilds"] svg path[stroke],
-[class*="guilds"] svg circle[stroke],
-[class*="guilds"] svg rect[stroke] {
-  stroke: transparent !important;
+/* Hide the animated SVG border ring */
+[class*="wrapper_"][class*="guild"] svg > svg,
+[class*="listItem_"] svg > svg {
+  display: none !important;
 }
 
-/* Force no outline on wrapper elements */
-[class*="blobContainer"] svg:not(:first-child),
-[class*="wrapper_"] svg svg {
+/* Remove stroke from any border elements */
+[class*="guilds_"] svg[class*="svg_"] > svg {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Target the specific border/ring animation */
+[class*="iconBadge"] ~ svg,
+[class*="blobContainer"] svg:last-child:not(:first-child) {
+  display: none !important;
+}
+
+/* Fallback: hide any nested SVGs that create the border effect */
+[class*="wrapper_"]:not([class*="avatar"]) > div > svg > svg {
   visibility: hidden !important;
 }
